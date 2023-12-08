@@ -10,4 +10,5 @@ install:
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/*.service
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config.example_cn
+        chmod a+x ${PREFIX}/*.sh
 	bash ${PREFIX}/makedirs.sh
