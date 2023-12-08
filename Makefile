@@ -12,3 +12,5 @@ install:
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config.example_cn
         chmod a+x ${PREFIX}/*.sh
 	bash ${PREFIX}/makedirs.sh
+install_service:
+        cp ${PREFIX}/*.service /etc/systemd/system/
