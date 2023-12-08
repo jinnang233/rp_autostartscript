@@ -8,6 +8,7 @@ This is a Rosenpass system self-starting script
 git clone https://github.com/jinnang233/_autostartscript
 cd rp_autostartscript
 make install
+make install_service
 ```
 
 ## Configuration
