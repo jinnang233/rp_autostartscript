@@ -5,7 +5,7 @@ This is a Rosenpass system self-starting script
 
 ## Installation 
 ```shell
-git clone https://github.com/jinnang233/_autostartscript
+git clone https://github.com/jinnang233/rp_autostartscript
 cd rp_autostartscript
 make install
 make install_service
