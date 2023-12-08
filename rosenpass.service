@@ -1,0 +1,10 @@
+[Unit]
+Description=Rosenpass daemon
+After=network-online.target
+[Service]
+Type=simple
+ExecStart=<INSTALL_DIR>/start.sh
+ExecStop=<INSTALL_DIR>/stop.sh
+
+[Install]
+WantedBy=multi-user.target

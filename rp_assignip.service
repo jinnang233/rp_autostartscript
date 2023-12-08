@@ -1,0 +1,10 @@
+[Unit]
+Description=Rosenpass assign ip address
+After=network.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=<INSTALL_DIR>/assign_ip.sh
+
+[Install]
+WantedBy=multi-user.target

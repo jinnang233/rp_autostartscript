@@ -1,0 +1,44 @@
+### 这个是配置文件，你可以把这个复制为config并更改
+## 获取配置文件的目录
+config_dir=`cd $(dirname ${BASH_SOURCE[0]});pwd`
+## 设备
+## Rosenpass NAT的设备（默认:wlan0）
+netif_dev="wlan0"
+## Rosenpass 创建设备（默认:rosenpass0）
+rosenpass_dev="rosenpass0"
+## Rosenpass NAT到USB共享设备（默认：usb0）
+usb_dev="usb0"
+## 是否允许NAT到外网
+nat_out=0
+## 是否允许Rosenpass之间相互穿透
+nat_rosenpass=1
+## 分配给Rosenpass设备的IP地址
+IP4_assigned="192.168.4.1/24"
+IP6_assigned="fd00::1/64"
+
+## 安装目录（这里可以取消注释并且把下面四个注释）
+#clientip_dir="<INSTALL_DIR>/clients_ip"
+#clients_dir="<INSTALL_DIR>/clients"
+#server_dir="<INSTALL_DIR>/server.rosenpass-secret"
+#server_pub_dir="<INSTALL_DIR>/server.rosenpass-public"
+clientip_dir="$config_dir/clients_ip"
+clients_dir="$config_dir/clients"
+server_dir="$config_dir/server.rosenpass-secret"
+server_pub_dir="$config_dir/server.rosenpass-public"
+
+## Rosenpass监听服务器地址
+listenip="\[::\]"
+## Rosenpass监听端口
+listenport=9999
+
+
+## DDNS 设置(这里为cloudflare提供商，请自行设置。 如果ddns参数为0表示禁用DDNS)
+ddns=0
+zone_id=""
+auth_key=""
+auth_email=""
+ddns_domain=""
+subdomain_id=""
+ddns_subdomain=""
+log_dir=""
+
