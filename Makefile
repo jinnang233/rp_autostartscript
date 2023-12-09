@@ -14,3 +14,6 @@ install:
 	bash ${PREFIX}/makedirs.sh
 install_service:
         cp ${PREFIX}/*.service /etc/systemd/system/
+	systemctl daemon-reload
+	systemctl enable rp_assignip --now
+	systemctl enable rosenpass --now
