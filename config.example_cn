@@ -30,7 +30,7 @@ server_pub_dir="$config_dir/server.rosenpass-public"
 listenip="\[::\]"
 ## Rosenpass监听端口
 listenport=9999
-
+listenport_wg=10000
 
 ## DDNS 设置(这里为cloudflare提供商，请自行设置。 如果ddns参数为0表示禁用DDNS)
 ddns=0

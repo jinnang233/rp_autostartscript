@@ -20,6 +20,7 @@ server_dir="$config_dir/server.rosenpass-secret"
 server_pub_dir="$config_dir/server.rosenpass-public"
 listenip="\[::\]"
 listenport=9999
+listenport_wg=10000
 
 
 ## DDNS config(cloudflare)
