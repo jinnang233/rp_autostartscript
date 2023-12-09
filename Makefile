@@ -10,10 +10,10 @@ install:
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/*.service
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config.example_cn
-        chmod a+x ${PREFIX}/*.sh
+	chmod a+x ${PREFIX}/*.sh
 	bash ${PREFIX}/makedirs.sh
 install_service:
-        cp ${PREFIX}/*.service /etc/systemd/system/
+	cp ${PREFIX}/*.service /etc/systemd/system/
 	systemctl daemon-reload
 	systemctl enable rp_assignip --now
 	systemctl enable rosenpass --now
