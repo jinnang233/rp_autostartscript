@@ -8,7 +8,7 @@ source $workdir/config
 while [ $ip_assigned -eq 0 ];
 	do
 	if /sbin/ifconfig |/usr/bin/grep -q $rosenpass_dev; then
-		/bin/echo "$rosenpass_dev find!"
+		/bin/echo "$rosenpass_dev found!"
 		PATH=$PATH:/usr/local/bin/ sudo ip a add $IP4_assigned dev $rosenpass_dev
 		PATH=$PATH:/usr/local/bin/ sudo ip a add $IP6_assigned dev $rosenpass_dev
 		PATH=$PATH:/usr/local/bin/ $workdir/ddns.sh & 

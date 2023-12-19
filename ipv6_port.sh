@@ -5,7 +5,7 @@ source $workdir/config
 while [ $ip_assigned -eq 0 ];
 	do
 	if /sbin/ifconfig |/usr/bin/grep -q "$rosenpass_dev"; then
-		/bin/echo "$rosenpass_dev find!"
+		/bin/echo "$rosenpass_dev found!"
 		PATH=$PATH:/usr/local/bin/ socat UDP4-LISTEN:$listenport,reuseaddr,fork UDP6:127.0.0.1:$listenport 
 		ip_assigned=1
 	fi
