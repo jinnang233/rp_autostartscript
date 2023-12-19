@@ -1,5 +1,5 @@
 [Unit]
-Description=Rosenpass assign ip address
+Description=rp_autostartscript
 After=network.target network-online.target
 
 [Service]

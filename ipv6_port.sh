@@ -11,6 +11,6 @@ while [ $ip_assigned -eq 0 ];
 	fi
 	sleep 1
 done
-/bin/echo "IPv6 to ipv4 assigned to $rosenpass_dev"
+/bin/echo "IPv4->IPv6 bind: $rosenpass_dev"
 
 

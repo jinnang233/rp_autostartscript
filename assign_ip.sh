@@ -17,4 +17,4 @@ while [ $ip_assigned -eq 0 ];
 	fi
 	sleep 1
 done
-/bin/echo "IP assigned to $rosenpass_dev!"
+/bin/echo "An IP address was assigned to $rosenpass_dev!"

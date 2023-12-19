@@ -27,9 +27,9 @@ dhcp_snoop=0
 up(){
 	# NAT up 
 	if [ $nat_out -eq 0 ]; then
-		echo "[$nat_dev]No NAT on $fwd_dev"
+		echo "[$nat_dev]NAT was disabled on $fwd_dev"
 	else
-		echo "[$nat_dev]NAT up"
+		echo "[$nat_dev]NAT has up"
 		/usr/sbin/ufw route allow in on $nat_dev out on $fwd_dev
 		/usr/sbin/iptables -t nat -I POSTROUTING -o $fwd_dev -j MASQUERADE
 		/usr/sbin/ip6tables -t nat -I POSTROUTING -o $fwd_dev -j MASQUERADE
@@ -69,9 +69,9 @@ down(){
 # 检测是否有USB设备， 如果有便配置NAT.
 if /sbin/ifconfig $usb_dev |/usr/bin/grep -q "inet"; then
 	if  /sbin/ifconfig $usb_dev|/usr/bin/grep -v "inet6" |/usr/bin/grep -q "inet" ; then
-		echo "IPv4 found"
+		echo "IPv4 Address was found."
 	else
-		echo "IPv4 not found."
+		echo "IPv4 Address was not found."
 	fi
 	IP4=$(get_ip4 $usb_dev)
 	IP4_netmask_length=$(get_ip4_netmask_length $usb_dev)
@@ -85,7 +85,7 @@ if /sbin/ifconfig $usb_dev |/usr/bin/grep -q "inet"; then
 	if [ "$dhcp_snooping" == "1" ]; then
 		echo "Local Link"
 	else
-		echo "Current IPV4 address assigned to $usb_dev: $IP4"
+		echo "An IPV4 address has been assigned to $usb_dev: $IP4"
 	fi
 	if [ -z $IP4  ]; then
 		echo "Empty IPv4 address"

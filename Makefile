@@ -12,6 +12,16 @@ install:
 	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config.example_cn
 	chmod a+x ${PREFIX}/*.sh
 	bash ${PREFIX}/makedirs.sh
+
+update:
+	echo "Updating ${PREFIX}"
+	cp *.sh ${PREFIX}/
+	cp *.service ${PREFIX}/
+	cp config.example ${PREFIX}/config.example
+	cp config.example_cn ${PREFIX}/config.example_cn
+	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/*.service
+	sed -i "s?<INSTALL_DIR>?${PREFIX}?g" ${PREFIX}/config.example_cn
+	chmod a+x ${PREFIX}/*.sh
 install_service:
 	cp ${PREFIX}/*.service /etc/systemd/system/
 	systemctl daemon-reload
