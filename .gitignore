@@ -1,0 +1,7 @@
+server.rosenpass-secret
+server.rosenpass-public
+clients
+clients_ip
+nohup.out
+config
+rosenpass.pid
