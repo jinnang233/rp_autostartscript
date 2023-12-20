@@ -12,5 +12,6 @@ then
 kill $(cat $workdir/rosenpass.pid)
 ip link del dev $rosenpass_dev type wireguard ||true
 ip link set dev $rosenpass_dev down
+rm $workdir/rosenpass.pid
 fi
 
