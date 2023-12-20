@@ -12,7 +12,7 @@ fi
 IP6=`ip -6 addr show | grep global | awk '{print \$2}' | awk -F "/" '{print \$1}'`
 for IP in ${IP_range[@]}; do
         echo "Local IP: $IP"
-        IP6=$(echo $IP6 |grep -v $IP)
+	IP6=$(echo $IP6 |grep -v $(echo $IP |awk -F"/" '{print $1}'))
 done
 echo  -e "All IP Addresses: \n$IP6"
 
