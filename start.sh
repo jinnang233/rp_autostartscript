@@ -56,5 +56,4 @@ echo $cmd
 eval $cmd
 PID=$!
 echo $PID |tee $workdir/rosenpass.pid
-
-read -n 1
+fg
