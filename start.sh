@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+set -m
 # 获取工作目录并配置设置环境变量
 workdir=$(cd $(dirname $0); pwd)
 source $workdir/config
@@ -56,3 +56,5 @@ echo $cmd
 eval $cmd
 PID=$!
 echo $PID |tee $workdir/rosenpass.pid
+
+read -n 1

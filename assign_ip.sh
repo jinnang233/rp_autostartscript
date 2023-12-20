@@ -9,7 +9,7 @@ while [ $ip_assigned -eq 0 ];
 	do
 	if /sbin/ifconfig |/usr/bin/grep -q $rosenpass_dev; then
 		/bin/echo "$rosenpass_dev found!"
-		for IP in $(IP_range[@]); do
+		for IP in ${IP_range[@]}; do
 			PATH=$PATH:/usr/local/bin/ sudo ip a add $IP dev $rosenpass_dev
 		done
 
