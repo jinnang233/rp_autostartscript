@@ -9,8 +9,10 @@ while [ $ip_assigned -eq 0 ];
 	do
 	if /sbin/ifconfig |/usr/bin/grep -q $rosenpass_dev; then
 		/bin/echo "$rosenpass_dev found!"
-		PATH=$PATH:/usr/local/bin/ sudo ip a add $IP4_assigned dev $rosenpass_dev
-		PATH=$PATH:/usr/local/bin/ sudo ip a add $IP6_assigned dev $rosenpass_dev
+		for IP in ${IP_range[@]}; do
+			PATH=$PATH:/usr/local/bin/ sudo ip a add $IP dev $rosenpass_dev
+		done
+
 		PATH=$PATH:/usr/local/bin/ $workdir/ddns.sh & 
 		ip_assigned=1
 		$workdir/nat_forward.sh up
