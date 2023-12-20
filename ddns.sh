@@ -9,8 +9,13 @@ if [ "$ddns" -eq 0 ]; then
 fi
 
 # 获取IP地址并回显
-IP6=`ip -6 addr show | grep global |grep -v "$IP6_assigned" | awk '{print \$2}' | awk -F "/" '{print \$1}'`
+IP6=`ip -6 addr show | grep global | awk '{print \$2}' | awk -F "/" '{print \$1}'`
+for IP in ${IP_range[@]}; do
+        echo "Local IP: $IP"
+        IP6=$(echo $IP6 |grep -v $IP)
+done
 echo  -e "All IP Addresses: \n$IP6"
+
 
 # 选取获得的第一个IPv6地址
 IP6=`echo $IP6 |awk -F ' ' '{print $1}'`

@@ -10,8 +10,9 @@ $workdir/nat_forward.sh down
 if test -e $workdir/rosenpass.pid
 then
 kill $(cat $workdir/rosenpass.pid)
-ip link del dev $rosenpass_dev type wireguard ||true
-ip link set dev $rosenpass_dev down
 rm $workdir/rosenpass.pid
 fi
+
+ip link del dev $rosenpass_dev type wireguard ||true
+ip link set dev $rosenpass_dev down
 
