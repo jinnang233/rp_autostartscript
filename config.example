@@ -6,8 +6,7 @@ usb_dev="usb0"
 nat_out=0
 nat_rosenpass=1
 ## Server IP assignment
-IP4_assigned="192.168.4.1/24"
-IP6_assigned="fd00::1/64"
+IP_range=("192.168.4.1/24")
 
 ## Directories
 #clientip_dir="<INSTALL_DIR>/clients_ip"

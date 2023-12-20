@@ -18,8 +18,8 @@ Server secret key directory: $server_dir \n
 # 显示监听地址
 eval "echo Listen: $listenip:$listenport_wg"
 echo "[Detail]"
-# 获取客户端公钥所有的目录的路径并排除所有以.disabled结尾的目录
-client_pks=$(/usr/bin/find $custom_fd -type d -not -iwholename $custom_fd -not -iregex ".*\.disabled")
+# 获取客户端公钥所有的目录的路径
+client_pks=$(/usr/bin/find $custom_fd -type d -not -iwholename $custom_fd)
 peers=""
 set -e
 
@@ -51,6 +51,8 @@ do
 done;
 
 # 显示并执行命令
-cmd="$cmd$peers"
+cmd="$cmd$peers&"
 echo $cmd
 eval $cmd
+PID=$!
+echo $PID |tee $workdir/rosenpass.pid
