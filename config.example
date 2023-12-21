@@ -23,6 +23,7 @@ listenport_wg=10000
 
 
 ## DDNS config(cloudflare)
+mngtmpaddr=0
 ddns=0
 zone_id=""
 auth_key=""
