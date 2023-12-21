@@ -32,6 +32,7 @@ listenport=9999
 listenport_wg=10000
 
 ## DDNS 设置(这里为cloudflare提供商，请自行设置。 如果ddns参数为0表示禁用DDNS)
+mngtmpaddr=0
 ddns=0
 zone_id=""
 auth_key=""
