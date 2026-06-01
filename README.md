@@ -1,4 +1,16 @@
 # rp_autostartscript
+
+
+> [!WARNING]
+> This code is **AI-generated**. **Review and test** the code, configuration,
+> cryptographic choices, and deployment commands carefully before using it. You
+> are responsible for confirming that it is correct, secure, and appropriate for
+> your environment.
+>
+> For better assurance, we recommend cloning this repository, reviewing the code yourself before using it.
+>
+> If you discover any code security issues, or any copyright or licensing concerns, please report them in Issues. Thank you for your understanding.
+
 A third-party startup script written for Rosenpass
 
 This is a Rosenpass system self-starting script
