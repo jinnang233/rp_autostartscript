@@ -7,7 +7,7 @@
 > are responsible for confirming that it is correct, secure, and appropriate for
 > your environment.
 >
-> For better assurance, we recommend cloning this repository, reviewing the code yourself before using it.
+> If possible, please run it in an ISOLATED environment, such as a virtual machine, to avoid potential security risks from build artifacts, such as the possibility that the maintainer’s computer has been infected with malware. For better assurance, we recommend cloning this repository, reviewing the code yourself before using it.
 >
 > If you discover any code security issues, or any copyright or licensing concerns, please report them in Issues. Thank you for your understanding.
 
